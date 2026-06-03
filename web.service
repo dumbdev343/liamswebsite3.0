@@ -1,0 +1,11 @@
+[Unit]
+Description=Python Flask Web Server
+After=NetworkManager.service
+
+[Service]
+Type=oneshot
+ExecStart=python /usr/local/bin/webserver/main.py
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
